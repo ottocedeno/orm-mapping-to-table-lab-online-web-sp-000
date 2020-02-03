@@ -41,6 +41,6 @@ class Student
   end
 
   def self.create(student_hash)
-    self.new(student_hash[:name], student_hash[:grade]) tap {|student| student.save}
+    self.new(student_hash[:name], student_hash[:grade]).tap {|student| student.save}
   end
 end
